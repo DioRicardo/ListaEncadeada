@@ -8,12 +8,14 @@ class CartaoNumerado:
     def __str__(self):
         return f"[{self.cor}, {self.numero}]"
 
+#Exigência de código 1 de 7
 class ListaEspera:
     def __init__(self):
         self.head = None
         self.ordA = 201
         self.ordV = 1
 
+    #Exigência de código 2 de 7
     def inserirSemPrioridade(self, paciente):
         if self.head is None:
             self.head = paciente
@@ -26,6 +28,7 @@ class ListaEspera:
         pacienteAtual.proximo = paciente
         return
 
+    #Exigência de código 3 de 7
     def inserirComPrioridade(self, paciente):
         if self.head is None:
             self.head = paciente
@@ -47,7 +50,7 @@ class ListaEspera:
         paciente.proximo = pacienteAtual
         return
 
-
+    #Exig&encia de código 4 de 7
     def inserir(self):
         cor = input("Informe a cor do cartão (A/V): ").upper()
         if cor == "A":
@@ -59,6 +62,7 @@ class ListaEspera:
         else:
             raise Exception("Cor escolhida inválida.")
 
+    #Exigência de código 5 de 7
     def imprimirListaEspera(self):
         if self.head is None:
             print("Ninguém na fila...")
@@ -71,6 +75,7 @@ class ListaEspera:
             pacienteAtual = pacienteAtual.proximo
         print("Fim da lista...")
 
+    #Exigência de código 6 de 7
     def atenderPaciente(self):
         if self.head is None:
             print("Não há ninguém na fila!")
@@ -87,6 +92,7 @@ class ListaEspera:
 
 listaDeEspera = ListaEspera()
 
+#Exigência de código 7 de 7
 while True:
     print("1 - adicionar paciente a fila")
     print("2 - mostrar pacientes na fila")
